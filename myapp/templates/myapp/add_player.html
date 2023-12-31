@@ -1,0 +1,16 @@
+<!-- your_app/templates/your_app/player_form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2>Add Player</h2>
+    <div class="d-flex justify-content-center">
+    <form method="post" class="form-group">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+
+{% endblock %}
